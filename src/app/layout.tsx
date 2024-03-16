@@ -1,5 +1,6 @@
 'use client';
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import React, { ReactNode, useState } from 'react';
 import AppWrappers from './AppWrappers';
 import Navbar from 'components/navbar';
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="flex h-full w-full bg-background-100 dark:bg-background-900">
             <Sidebar open={open} setOpen={setOpen} variant="admin" />
             {/* Navbar & Main Content */}
+            <SpeedInsights/>
             <div className="h-full w-full font-dm dark:bg-background-900">
               {/* Main Content */}
               <main
